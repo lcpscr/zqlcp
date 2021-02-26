@@ -150,16 +150,15 @@ if (isGetCookie = typeof $request !== 'undefined') {
 
 function kdHost(api, body) {
     return {
-            'Host': 'kd.youth.cn',
-            'Connection': 'keep-alive',
-            'X-Requested-With': 'XMLHttpRequest',
-            'User-Agent': 'Mozilla/5.0 (Linux; Android 10; GLK-AL00 Build/HUAWEIGLK-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 Mobile Safari/537.36'
-            'Accept': '*/*',
-            'Referer': 'https://kd.youth.cn/h5/20190301taskcenter/240/index.html',
-            'Accept-Encoding': 'gzip, deflate',
-            'Accept-Language': 'zh-CN,zh;q\u003d0.9,en-US;q\u003d0.8,en;q\u003d0.7',
-            'Cookie': 'sajssdk_2019_cross_new_user\u003d1; sensorsdata2019jssdkcross\u003d%7B%22distinct_id%22%3A%2253070068%22%2C%22%24device_id%22%3A%22177de54aaf3144-0d85407220ee5d-61471127-277200-177de54aafd1e7%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_referrer%22%3A%22%22%2C%22%24latest_referrer_host%22%3A%22%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%7D%2C%22first_id%22%3A%22177de54aaf3144-0d85407220ee5d-61471127-277200-177de54aafd1e7%22%7D; Hm_lvt_268f0a31fc0d047e5253dd69ad3a4775\u003d1614342829; Hm_lvt_6c30047a5b80400b0fd3f410638b8f0c\u003d1614342829; Hm_lpvt_6c30047a5b80400b0fd3f410638b8f0c\u003d1614342829; sajssdk_2015_cross_new_user\u003d1; sensorsdata2015jssdkcross\u003d%7B%22distinct_id%22%3A%2253070068%22%2C%22%24device_id%22%3A%22177de5696eb17c-0d31562713c1a9-61471127-277200-177de5696ec135%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_referrer%22%3A%22%22%2C%22%24latest_referrer_host%22%3A%22%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%7D%2C%22first_id%22%3A%22177de5696eb17c-0d31562713c1a9-61471127-277200-177de5696ec135%22%7D; Hm_lpvt_268f0a31fc0d047e5253dd69ad3a4775\u003d1614342955'
-          },
+    url: 'https://kd.youth.cn/'+api+`&${myuid}`,
+    headers:{
+     'Accept': '*/*',
+     'Accept-Encoding': 'gzip, deflate, br',
+     'Referer': 'https://kd.youth.cn/h5/20190301taskcenter/ios/index.html?'+cookie,
+     'Host': 'kd.youth.cn',
+     'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148',
+     'X-Requested-With': 'XMLHttpRequest'
+    },
         body: body,
         //timeout: 1000,
     }
